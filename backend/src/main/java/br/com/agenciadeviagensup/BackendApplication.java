@@ -39,11 +39,11 @@ public class BackendApplication implements CommandLineRunner{
 		Destino destino1 = new Destino("Brasil","RJ","RJ");
 		Destino destino2 = new Destino("Brasil","SP","SP");
 //		
-//		Passagem passagem1 = new Passagem(2000.0,cliente1,destino1);
-//		Passagem passagem2 = new Passagem(2000.0,cliente2,destino2);
+		Passagem passagem1 = new Passagem(2000.0,cliente1,destino1);
+		Passagem passagem2 = new Passagem(2000.0,cliente2,destino2);
 //		
-//		cliente1.getPassagens().addAll(Arrays.asList(passagem1));
-//		cliente2.getPassagens().addAll(Arrays.asList(passagem2));
+		cliente1.getPassagens().addAll(Arrays.asList(passagem1));
+		cliente2.getPassagens().addAll(Arrays.asList(passagem2));
 		
 		clienteRepo.save(cliente1);
 		clienteRepo.save(cliente2);
@@ -51,8 +51,8 @@ public class BackendApplication implements CommandLineRunner{
 		destinoRepo.save(destino1);
 		destinoRepo.save(destino2);
 //		
-//		passagemRepo.save(passagem1);
-//		passagemRepo.save(passagem2);
+		passagemRepo.save(passagem1);
+		passagemRepo.save(passagem2);
 		
 		
 	}
